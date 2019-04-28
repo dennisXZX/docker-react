@@ -1,3 +1,7 @@
+os: osx
+
+osx_image: xcode8.3
+
 # travis needs sudo permission
 sudo: required
 
@@ -8,4 +12,4 @@ before_install:
   - docker build -t dennisxiao/docker-react -f Dockerfile.dev .
 
 script:
-  - docker container run dennisxiao/docker-react yarn test --coverage
+  - docker container run dennisxiao/docker-react npm run test -- --coverage
