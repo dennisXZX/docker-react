@@ -1,0 +1,11 @@
+# travis needs sudo permission
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dennisxiao/docker-react -f Dockerfile.dev .
+
+script:
+  - docker container run dennisxiao/docker-react yarn test -- --coverage
