@@ -1,7 +1,3 @@
-os: osx
-
-osx_image: xcode8.3
-
 # travis needs sudo permission
 sudo: required
 
