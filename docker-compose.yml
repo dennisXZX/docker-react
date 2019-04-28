@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  # dev environment service
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # don't map the node_modules folder
+      - /app/node_modules
+      # map the current folder outside the container to the app folder inside container
+      - .:/app
+
+  # service for running testing
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      # don't map the node_modules folder
+      - /app/node_modules
+      # map the current folder outside the container to the app folder inside container
+      - .:/app
+    command: ["yarn", "test"]
