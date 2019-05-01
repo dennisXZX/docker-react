@@ -6,8 +6,6 @@ COPY ./package.json ./
 
 RUN yarn install
 
-RUN yarn global add jest
-
 COPY ./ ./
 
 CMD ["yarn", "start"]
