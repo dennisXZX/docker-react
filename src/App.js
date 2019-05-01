@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React App with Docker!</h1>
+        <h1>React App with Docker with Travis CI!</h1>
       </header>
     </div>
   );
