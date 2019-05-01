@@ -5,11 +5,11 @@ WORKDIR '/app'
 
 COPY package.json ./
 
-RUN npm install
+RUN yarn install
 
 COPY ./ ./
 
-RUN npm run build
+RUN yarn run build
 
 # set up the run phrase
 FROM nginx
