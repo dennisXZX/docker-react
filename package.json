@@ -76,9 +76,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "jest": "^24.7.1"
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
